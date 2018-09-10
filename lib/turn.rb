@@ -10,11 +10,6 @@ def input_to_index(user_input)
 intInput = "#{user_input}".to_i - 1
 end
 
-
-def move(boardArray, index, int_input= "X")
-    boardArray[index] = int_input
-end
-
 def valid_move?(board, index)
   index.between?(0,8) && !position_taken?(board,index)
 end
@@ -38,4 +33,8 @@ def position_taken?(board, index)
   else 
     return false
   end
+end
+
+def move(boardArray, index, int_input= "X")
+    boardArray[index] = int_input
 end
